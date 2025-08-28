@@ -1,0 +1,100 @@
+/* Reset básico */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+.app-header {
+    padding: 24px 16px;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(30,41,59,0.9), rgba(15,23,42,0));
+    border-bottom: 1px solid rgba(148,163,184,0.15);
+}
+.app-header h1 { margin: 0 0 4px; font-size: 28px; }
+.subtitle { margin: 0; color: #94a3b8; }
+
+.app-main { max-width: 960px; margin: 24px auto; padding: 0 16px; display: grid; gap: 16px; }
+.card {
+    background: #0b1220;
+    border: 1px solid rgba(148,163,184,0.12);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 10px 24px rgba(2,6,23,0.4);
+}
+.card h2 { margin-top: 0; }
+
+#register-form { display: flex; gap: 8px; flex-wrap: wrap; }
+#register-form input {
+    flex: 1 1 240px;
+    padding: 10px 12px;
+    border: 1px solid rgba(148,163,184,0.25);
+    background: #0f172a;
+    color: #e2e8f0;
+    border-radius: 10px;
+}
+#register-form button {
+    padding: 10px 14px;
+    border: none;
+    background: #22c55e;
+    color: #0b1220;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.help { margin-top: 8px; color: #94a3b8; font-size: 12px; }
+
+.list-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.tools { display: flex; gap: 8px; align-items: center; }
+.tools input { padding: 8px 10px; border-radius: 8px; border: 1px solid rgba(148,163,184,0.25); background: #0f172a; color: #e2e8f0; }
+.tools button { padding: 8px 12px; border-radius: 8px; border: 1px solid rgba(244,63,94,0.4); background: #ef4444; color: #fff; cursor: pointer; }
+.tools button.danger { background: #ef4444; }
+
+.empty { color: #94a3b8; padding: 12px; border: 1px dashed rgba(148,163,184,0.25); border-radius: 10px; text-align: center; }
+
+.students { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.student {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto 120px auto;
+    gap: 8px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid rgba(148,163,184,0.15);
+    border-radius: 10px;
+    background: #0f172a;
+}
+.student .status-free {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-weight: 900;
+    font-size: 28px;
+    color: #f87171;
+    letter-spacing: 1px;
+    margin-top: 6px;
+}
+.student-name { font-weight: 600; }
+.counter { display: inline-flex; align-items: center; gap: 6px; }
+.counter button { width: 32px; height: 32px; border-radius: 8px; border: 1px solid rgba(148,163,184,0.25); background: #0b1220; color: #e2e8f0; cursor: pointer; }
+.counter input { width: 64px; text-align: center; padding: 6px 8px; border-radius: 8px; border: 1px solid rgba(148,163,184,0.25); background: #0b1220; color: #e2e8f0; }
+.actions { display: inline-flex; gap: 6px; }
+.actions button { padding: 8px 10px; border-radius: 8px; border: 1px solid rgba(148,163,184,0.25); background: #0b1220; color: #e2e8f0; cursor: pointer; }
+.actions button.delete { border-color: rgba(244,63,94,0.4); color: #fecaca; }
+
+.app-footer { text-align: center; color: #94a3b8; padding: 24px 16px; }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+

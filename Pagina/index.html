@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Faltas - Escuela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>Control de Faltas</h1>
+        <p class="subtitle">Registra alumnos y gestiona sus faltas</p>
+    </header>
+
+    <main class="app-main">
+        <section class="card" aria-labelledby="registro-title">
+            <h2 id="registro-title">Registrar alumno</h2>
+            <form id="register-form" autocomplete="off">
+                <label for="student-name" class="sr-only">Nombre del alumno</label>
+                <input id="student-name" name="studentName" type="text" placeholder="Nombre del alumno" required>
+                <button type="submit" id="save-student">Guardar</button>
+                <p class="help">El ID se solicitará al guardar y no se mostrará en la lista.</p>
+            </form>
+        </section>
+
+        <section class="card" aria-labelledby="listado-title">
+            <div class="list-header">
+                <h2 id="listado-title">Alumnos registrados</h2>
+                <div class="tools">
+                    <input id="filter" type="text" placeholder="Buscar por nombre..." aria-label="Buscar por nombre">
+                    <button id="clear-all" class="danger" title="Borrar todos los alumnos">Borrar todo</button>
+                </div>
+            </div>
+            <div id="empty-state" class="empty">Aún no hay alumnos registrados.</div>
+            <ul id="students-list" class="students" aria-live="polite"></ul>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <small>Datos guardados localmente en tu navegador.</small>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
